@@ -10,6 +10,37 @@
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Byte Size Calculation</title>
+</head>
+<body>
+    <div>
+        <h1>String Byte Size Calculator</h1>
+        <p>Enter a string and click the button to calculate its byte size:</p>
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button onclick="calculateByteSize()">Calculate Byte Size</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateByteSize() {
+            // Get the input string from the input field
+            const inputString = document.getElementById("inputString").value;
+
+            // Create a Blob object with the input string
+            const blob = new Blob([inputString]);
+
+            // Get the size of the Blob object in bytes
+            const sizeInBytes = blob.size;
+
+            // Display the result in the HTML document
+            document.getElementById("result").textContent = `Byte Size: ${sizeInBytes} bytes`;
+        }
+    </script>
+</body>
+</html>
 
 </body>
 
